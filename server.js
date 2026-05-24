@@ -6,7 +6,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' ? 'https://your-domain.com' : 'http://localhost:3000',
+  origin: [
+    'http://localhost:3000',                      // local development
+    'https://d39mw21ib53xw.cloudfront.net'        // production CloudFront
+  ],
   credentials: true
 }));
 app.use(express.json());
