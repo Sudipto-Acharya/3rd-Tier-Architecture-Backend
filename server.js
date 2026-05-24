@@ -8,6 +8,7 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:3000',                      // local development
+    'http://d39mw21ib53xw.cloudfront.net'
     'https://d39mw21ib53xw.cloudfront.net'        // production CloudFront
   ],
   credentials: true
